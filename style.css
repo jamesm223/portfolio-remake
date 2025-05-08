@@ -1,16 +1,29 @@
 * {
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
     background-color: #3c4048;
+    height: 2000px;
+    width: 1728px;
 }
 
+/* nav bar css */
+
 .topnav {
-    background-color: #4D4646;
+    position: fixed;
     width: 100%;
     height: 100px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    transition: ease-in-out 0.2s;
+}
+
+.topnav.black {
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: ease-in-out 0.2s;
 }
 
 .topnav img {
@@ -18,3 +31,188 @@ body {
     height: 100px;
     padding-left: 30px;
 }
+
+.nav {
+    position: absolute;
+    left: 65%;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav a:hover {
+    scale: 1.1;
+    transition: scale .2s;
+}
+
+/* home page content */
+
+.top-content {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 275px;
+}
+
+.top-content img {
+    position: inherit;
+    left: 200px;
+    padding: 0px 40px 40px 0px;
+}
+
+.home-info-paragraph {
+    position: inherit;
+    left: 150px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-content h1, .top-content h2, .top-content p {
+    color: #e7ecef;
+    position: inherit;
+    top: 100px;
+    left: 140px;
+}
+
+.top-content p {
+    font-size: 24px;
+    width: 100%;
+}
+
+.home-buttons {
+    position: inherit;
+    top: 120px;
+    left: 140px;
+}
+
+.home-buttons button, .home-buttons a{
+    height: 75px;
+    width: 150px;
+    border: none;
+    text-decoration: none;
+    color: #e7ecef;
+    border-radius: 5px;
+    font-size: 18px;
+    
+}
+
+.home-buttons button {
+    background-color: #3c4048;
+    border: 2px #61a5c2 solid;
+}
+
+#portfolio-button {
+    margin-right: 20px;
+}
+
+
+/* scrolling text css */
+
+.typewriter-text h1{
+    font-weight: 600;
+    font-size: 23px;
+    width: 150px;
+    height: 30px;
+    padding: 8px;
+    margin: 0px;
+    color: #d1495b;
+}
+
+.typewriter-text {
+    position: relative;
+    top: 46px;
+    left: 200px;
+    width: 150px;
+    height: 30px;
+    overflow: hidden;
+    margin: 0px;
+    animation: typing 3s steps(20) infinite;
+}
+
+.scrolling-text {
+    animation: scroll 9s infinite;
+
+}
+
+@keyframes scroll {
+    0%, 33.33% {
+        transform: translateY(0);
+      }
+      33.34%, 66.66% {
+        transform: translateY(-1.9rem);
+      }
+      66.67%, 100% {
+        transform: translateY(-3.8rem);
+      }
+    }
+
+@keyframes typing {
+    0% {
+      width: 0px;
+    }
+    40%, 60% {
+      width: 150px;
+    }
+    100% {
+     width: 0px;
+    }
+  }
+
+  /* home page portfolio preview */
+
+.home-portfolio-preview  h1{
+    color: #e7ecef;
+    position: relative;
+    top: 450px;
+    left: 30px;
+    font-size: 64px;
+    border-bottom: 1px solid #61a5c2;
+    width: 600px;
+    font-weight: 500;
+}
+
+.home-portfolio-examples {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 600px;
+    padding: 0px 30px 0px 30px;
+    position: relative;
+    top: 500px;
+    gap: 20px;
+}
+
+.home-card {
+    background-color: #4d525c;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+
+.home-card img {
+    width: 500px;
+    height: 300px;
+}
+
+.home-portfolio-examples h4 {
+    color: #e7ecef;
+    width: 100px;
+    background-color: #548ba3;
+    padding: 3px;
+    border-radius: 10px;
+    position: relative;
+    left: 375px;
+    top: -300px;
+}
+
