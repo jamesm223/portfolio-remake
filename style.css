@@ -7,11 +7,13 @@
 }
 
 body {
+    max-width: 1728px;
     background-color: #3c4048;
-    width: 100%;
     margin: 0px;
     display: flex;
     flex-direction: column;
+    background-image: url(/imgs/background.png);
+    background-size: 100%;
 }
 
 /* nav bar css */
@@ -243,7 +245,7 @@ body {
     color: #e7ecef;
     position: relative;
     top: -30px;
-    font-size: 18px;
+    font-size: 17px;
     padding: 0px 20px 0px 20px;
 }
 
@@ -475,13 +477,14 @@ table, td{
 #bigbite-logo {
     width: 200px;
     height: 200px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.151));
 }
 
 #dt-logo {
     height: 200px;
     width: 200px;
     margin-left: 20px;
-    border: 3px solid #548ba3;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.151));
 }
 
 .about-experience {
@@ -509,16 +512,105 @@ table, td{
     font-size: 12px;
 }
 
-.about-footer-container {
-    position: relative;
-    top: 100px;
-    width: 100%;
-    background-color: #4d525c;
-    height: 300px;
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#about-footer-container {
+    top: 1250px;
 }
 
+/* PORTFOLIO CSS ######################################################################################## */
+
+.port-top-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 150px;
+}
+
+.port-top-content h2 {
+    color: #e7ecef;
+    font-size: 40px;
+}
+
+.scroll{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    width: 260px;
+    overflow: hidden;
+    
+    
+}
+
+.scrolling_txt{
+    min-width: 260px;
+    width: 260px;
+    display: flex;
+    justify-content: center;
+    animation: marquee 15s linear infinite;
+    position: relative;
+    left: 390px;
+}
+
+.scroll-container{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+@keyframes marquee {
+    0%{
+        transform: translate(0 ,0);
+    }
+    16.5%,
+    33%{
+        transform: translate(-260px,0);
+    }
+    49.5%,
+    66%{
+        transform: translate(-520px, 0);
+    }
+    82.5%,
+    100%{
+        transform: translate(-780px, 0);
+    }
+    
+}
+
+
+.port-top-text {
+    color: #e7ecef;
+    position: relative;
+    top: 300px;
+    left: 60px;
+}
+
+.port-top-text h1 {
+    font-size: 64px;
+    border-bottom: 1px solid #548ba3;
+    width: 370px;
+}
+
+.port-top-text p {
+    font-size: 32px;
+    margin-right: 60px;
+}
+
+.port-language-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 400px;
+}
+
+.port-language-buttons button {
+    width: 150px;
+    height: 75px;
+    font-size: 24px;
+    border-radius: 25px;
+    border: none;
+    background-color: #61a5c2;
+    color: #e7ecef;
+}
